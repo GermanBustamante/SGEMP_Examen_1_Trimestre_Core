@@ -7,7 +7,7 @@ namespace SGEMP_Examen_1_Trimestre_Entidades
     public class clsCategoria
     {
         #region propiedades publicas
-        public int IdCategoria{ get;     }
+        public int IdCategoria{ get; set; }
         public string NombreCategoria { get; set; }
         #endregion
         #region constructores
