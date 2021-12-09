@@ -1,0 +1,51 @@
+﻿@model SGEMP_Examen_1_Trimestre_Entidades.clsPlanta
+
+@{
+    ViewData["Title"] = "EditarPrecioPlanta";
+}
+
+<h1>Agregar precio a planta</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditarPrecioPlanta" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                @Html.HiddenFor(item => item.IdPlanta)
+            </div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label><br />
+                @Html.DisplayFor(item => item.Nombre)
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripcion" class="control-label"></label><br />
+                @Html.DisplayFor(item => item.Descripcion)
+            </div>
+            <div class="form-group">
+                <label asp-for="Precio" class="control-label"></label>
+                <input asp-for="Precio" class="form-control" />
+                @Html.ValidationMessageFor(item => item.Precio)
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    @Html.ActionLink("Volver a la lista de plantas","ListadoPlantasPorCategoria", "Plantas", new { idCategoria = Model.IdCategoria})
+</div>
+
+@{
+    if (ViewBag.NumeroFilasAfectadas == 1)
+    {
+        <div><font color="green">Se ha actualizado correctamente</font></div>
+    }
+    else if (ViewBag.NumeroFilasAfectadas == 0)
+    {
+        <div><font color="red">No se ha actualizado</font></div>
+    }
+}
+

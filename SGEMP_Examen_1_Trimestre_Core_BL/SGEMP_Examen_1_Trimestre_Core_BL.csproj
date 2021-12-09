@@ -5,11 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Listados\" />
-    <Folder Include="Manejadoras\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\SGEMP_Examen_1_Trimestre_DAL\SGEMP_Examen_1_Trimestre_DAL.csproj" />
     <ProjectReference Include="..\SGEMP_Examen_1_Trimestre_Entidades\SGEMP_Examen_1_Trimestre_Entidades.csproj" />
   </ItemGroup>

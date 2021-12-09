@@ -1,0 +1,31 @@
+﻿@model IEnumerable<SGEMP_Examen_1_Trimestre_Entidades.clsCategoria>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Categorias</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreCategoria)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreCategoria)
+            </td>
+            <td>
+                @Html.ActionLink("Ver Plantas","ListadoPlantasPorCategoria", "Plantas", new { idCategoria=item.IdCategoria })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

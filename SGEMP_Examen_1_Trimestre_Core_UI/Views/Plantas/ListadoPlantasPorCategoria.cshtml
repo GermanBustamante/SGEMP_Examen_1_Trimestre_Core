@@ -1,0 +1,38 @@
+﻿@model IEnumerable<SGEMP_Examen_1_Trimestre_Entidades.clsPlanta>
+
+@{
+    ViewData["Title"] = "ListadoPlantasPorCategoria";
+}
+
+<h1>Listado Plantas Dada Categoria</h1>
+<!-- NOTA, ME HUBIERA GUSTADO HACER UN MODELO CLSPLANTACONNOMBRECATEGORIA QUE TENDRIA UNA PLANTA Y EL NOMBRE DE LA CATEGORIA PARA MOSTRAR EN EL TITULO
+
+<h1>Listado Plantas De la Categoria "Model.NombreCategoria"</h1> PERO NO ME HA DADO TIEMPO-->
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdPlanta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdPlanta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.ActionLink("Agregar precio", "EditarPrecioPlanta", new {  idPlanta=item.IdPlanta  })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<div>@Html.ActionLink("Volver a la lista de categorias","Index", "Categorias")</div>

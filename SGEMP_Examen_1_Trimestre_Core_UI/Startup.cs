@@ -46,7 +46,7 @@ namespace SGEMP_Examen_1_Trimestre_Core_UI
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Categorias}/{action=Index}/{id?}");
             });
         }
     }

@@ -33,9 +33,9 @@ namespace SGEMP_Examen_1_Trimestre_DAL.Conexion
         public ClsMyConnection()
         {
             Server = "107-16\\SQLEXPRESS";
-            DataBase = "";
-            User = "gdebustamante";
-            Pass = "mitesoro";
+            DataBase = "FrayGuillermo";
+            User = "prueba";
+            Pass = "123";
         }
         //Con parámetros por si quisiera cambiar las conexiones
         public ClsMyConnection(String server, String database, String user, String pass)

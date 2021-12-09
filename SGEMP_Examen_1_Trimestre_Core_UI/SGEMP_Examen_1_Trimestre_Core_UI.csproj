@@ -5,12 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SGEMP_Examen_1_Trimestre_Core_BL\SGEMP_Examen_1_Trimestre_Core_BL.csproj" />
-    <ProjectReference Include="..\SGEMP_Examen_1_Trimestre_Entidades\SGEMP_Examen_1_Trimestre_Entidades.csproj" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\ViewModels\" />
+    <ProjectReference Include="..\SGEMP_Examen_1_Trimestre_Core_BL\SGEMP_Examen_1_Trimestre_Core_BL.csproj" />
+    <ProjectReference Include="..\SGEMP_Examen_1_Trimestre_Entidades\SGEMP_Examen_1_Trimestre_Entidades.csproj" />
   </ItemGroup>
 
 </Project>
