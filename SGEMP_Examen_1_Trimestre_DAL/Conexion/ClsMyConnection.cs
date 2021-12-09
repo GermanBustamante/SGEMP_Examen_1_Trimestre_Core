@@ -32,10 +32,10 @@ namespace SGEMP_Examen_1_Trimestre_DAL.Conexion
         #region constructores
         public ClsMyConnection()
         {
-            Server = "servidor-german-sql.database.windows.net";
-            DataBase = "PersonasDepartamentosDB";
+            Server = "107-16\\SQLEXPRESS";
+            DataBase = "";
             User = "gdebustamante";
-            Pass = "#Mitesoro";
+            Pass = "mitesoro";
         }
         //Con parámetros por si quisiera cambiar las conexiones
         public ClsMyConnection(String server, String database, String user, String pass)

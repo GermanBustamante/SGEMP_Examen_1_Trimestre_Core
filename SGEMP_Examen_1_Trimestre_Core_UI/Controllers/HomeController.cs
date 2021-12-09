@@ -20,6 +20,9 @@ namespace SGEMP_Examen_1_Trimestre_Core_UI.Controllers
 
         public IActionResult Index()
         {
+            SGEMP_Examen_1_Trimestre_DAL.Conexion.ClsMyConnection clsMyConnection = new SGEMP_Examen_1_Trimestre_DAL.Conexion.ClsMyConnection();
+            clsMyConnection.getConnection();
+            
             return View();
         }
 
