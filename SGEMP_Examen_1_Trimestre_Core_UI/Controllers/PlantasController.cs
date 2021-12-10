@@ -53,7 +53,7 @@ namespace SGEMP_Examen_1_Trimestre_Core_UI.Controllers
             if (!ModelState.IsValid)
             {
                 //TODO ESTO NO ES DEL TODO CORRECTO YA QUE EL PARÁMETRO DEBERÍA RECOGER EL OBJETO PLANTA CON LA DESCRIPCIÓN Y EL NOMBRE PARA NO TENER QUE LLAMAR DE NUEVO A LA BD, CAMBIAR SI DA TIEMPO
-                actionResult = View("EditarPrecioPlanta", clsListadoPlantasBL.getPlantaCompletaDadoIdBL(oPlanta.IdPlanta));
+                actionResult = View("EditarPrecioPlanta",oPlanta);
             }
             else
             {

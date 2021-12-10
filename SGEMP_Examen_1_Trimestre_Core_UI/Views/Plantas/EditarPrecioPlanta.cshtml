@@ -11,16 +11,19 @@
     <div class="col-md-4">
         <form asp-action="EditarPrecioPlanta" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @Html.HiddenFor(item => item.IdCategoria)
             <div class="form-group">
                 @Html.HiddenFor(item => item.IdPlanta)
             </div>
             <div class="form-group">
                 <label asp-for="Nombre" class="control-label"></label><br />
                 @Html.DisplayFor(item => item.Nombre)
+                @Html.HiddenFor(item => item.Nombre)
             </div>
             <div class="form-group">
                 <label asp-for="Descripcion" class="control-label"></label><br />
                 @Html.DisplayFor(item => item.Descripcion)
+                @Html.HiddenFor(item => item.Descripcion)
             </div>
             <div class="form-group">
                 <label asp-for="Precio" class="control-label"></label>
